@@ -1,0 +1,17 @@
+{
+  // Dark green window tint so this repo's VS Code window is easy to tell apart.
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#1b3a26",
+    "titleBar.activeForeground": "#e6efe8",
+    "titleBar.inactiveBackground": "#14291c",
+    "titleBar.inactiveForeground": "#a9b8ad",
+    "activityBar.background": "#1b3a26",
+    "activityBar.foreground": "#e6efe8",
+    "statusBar.background": "#1b3a26",
+    "statusBar.foreground": "#e6efe8",
+    "sideBar.background": "#122018",
+    "editor.background": "#0f1a13",
+    "panel.background": "#0f1a13",
+    "terminal.background": "#0f1a13"
+  }
+}
