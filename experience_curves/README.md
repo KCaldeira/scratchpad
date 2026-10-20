@@ -12,8 +12,11 @@ Analysis of the technology experience-curve (learning-rate) data described in:
 ## Data
 
 `data/input/ExpCurves.csv` has unit cost against cumulative production for 87
-technologies, drawn from the Performance Curve Database. The file has 1,707 rows
-and these columns:
+technologies from the Performance Curve Database (1,707 rows). It is the file from
+the authors' code release v4.0 on Zenodo (`carnegie/clab_experience_curve-v4.0.zip`),
+MD5 `0e662032b72c644073d02f7d92d28829`, redistributed under the MIT licence in
+`data/input/LICENSE`. Its cumulative production already includes the paper's
+correction to initial production.
 
 | Column | Meaning |
 | --- | --- |
@@ -21,6 +24,16 @@ and these columns:
 | `Cumulative production` | Cumulative production to date |
 | `Year` | Year of observation |
 | `Unit cost` | Unit cost |
+| `Normalized cumulative production` | Cumulative production divided by its first value |
+| `Normalized unit cost` | Unit cost divided by its first value |
+
+An earlier copy here came from the authors' v1.0 release (2023), whose
+cumulative-production values differ and give noticeably different learning rates
+(unweighted median 22.7% instead of 17.9%). Don't use it.
+
+The maintained version of this analysis is in the `ciunit.github.io` repo, under
+`additional_analyses/carlino-2025-technology-learning-rates/`. It has the same script
+and data, and this folder's outputs match it.
 
 The paper PDF (with supplement) is kept in this folder for reference but is
 gitignored.
@@ -34,8 +47,7 @@ technology:
 
 `beta` is the learning exponent and `LR` the learning rate (% cost decline per
 doubling of cumulative production). Each technology gets one constant `beta`,
-fit by ordinary least squares on all of its points. Unlike the paper, no
-correction to initial cumulative production is applied.
+fit by ordinary least squares on all of its points.
 
 Run from this folder:
 
